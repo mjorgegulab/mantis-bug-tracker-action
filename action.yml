@@ -1,0 +1,95 @@
+name: 'Mantis Bug Tracker Issue Creation'
+description: 'Create a mantis bug tracker issue using github actions'
+author: 'Marc Jorge Gonzalez <me@thewolfx41.dev>'
+inputs:
+  base-url:
+    description: 'base url of mantis-bt api'
+    required: true
+    default: 'null'
+  url:
+    description: 'path url of mantis-bt api'
+    required: true
+    default: '/'
+  token:
+    description: 'mantis-bt authentication token'
+    required: true
+    default: 'null'
+  timeout:
+    description: 'http request timeout'
+    required: false
+    default: '5000'
+  proxy-type:
+    description: 'http request proxy type to use (http|https)'
+    required: false
+    default: 'null'
+  proxy-host:
+    description: 'http request proxy host'
+    required: false
+    default: 'null'
+  proxy-port:
+    description: 'http request proxy port'
+    required: false
+    default: '8080'
+  proxy-username:
+    description: 'http request proxy username'
+    required: false
+    default: 'null'
+  proxy-password:
+    description: 'http request proxy password'
+    required: false
+    default: 'null'
+  summary:
+    description: 'mantis-bt issue summary'
+    required: true
+    default: 'null'
+  description:
+    description: 'mantis-bt issue description'
+    required: true
+    default: 'null'
+  additional-information:
+    description: 'mantis-bt issue additional information'
+    required: false
+    default: 'null'
+  project-id:
+    description: 'mantis-bt issue project id'
+    required: true
+    default: 'null'
+  category-id:
+    description: 'mantis-bt issue category id'
+    required: true
+    default: 'null'
+  handler-name:
+    description: 'mantis-bt issue handler name'
+    required: false
+    default: 'null'
+  view-state-name:
+    description: 'mantis-bt issue view state name'
+    required: false
+    default: 'null'
+  priority-name:
+    description: 'mantis-bt issue priority name'
+    required: false
+    default: 'null'
+  severity-name:
+    description: 'mantis-bt issue severity name'
+    required: false
+    default: 'null'
+  reproducibility-name:
+    description: 'mantis-bt issue reproducibility name'
+    required: false
+    default: 'null'
+  tags:
+    description: 'mantis-bt issue tag names'
+    required: false
+    default: 'null'
+outputs:
+  issue-id:
+    description: 'The mantis-bt issue id'
+  issue-url:
+    description: 'The mantis-bt issue url'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'triangle'
+  color: 'green'
