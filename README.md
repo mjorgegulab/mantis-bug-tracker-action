@@ -4,7 +4,7 @@
 
 Automate issue creation on Mantis Bug Tracker with this GitHub action. **It's free!**
 
-## [![Test Code](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml)
+## [![Test Code](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml) [![CodeQL](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/github-code-scanning/codeql)
 
 ### Usage Example
 
