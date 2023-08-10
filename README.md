@@ -4,7 +4,7 @@
 
 Automate issue creation on Mantis Bug Tracker with this GitHub action. **It's free!**
 
-## [![Test Code](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml) [![CodeQL](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/github-code-scanning/codeql) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e822fd93d7ee45d1856054062c86cbfc)](https://app.codacy.com/gh/mjorgegulab/mantis-bug-tracker-action/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+## [![Test Code](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/tests.yml) [![CodeQL](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mjorgegulab/mantis-bug-tracker-action/actions/workflows/github-code-scanning/codeql) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e822fd93d7ee45d1856054062c86cbfc)](https://app.codacy.com/gh/mjorgegulab/mantis-bug-tracker-action/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Known Vulnerabilities](https://snyk.io/test/github/mjorgegulab/mantis-bug-tracker-action/badge.svg)](https://snyk.io/test/github/mjorgegulab/mantis-bug-tracker-action)
 
 ### Usage Example
 
