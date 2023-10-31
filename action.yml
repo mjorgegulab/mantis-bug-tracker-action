@@ -12,7 +12,7 @@ inputs:
     default: '/'
   token:
     description: 'mantis-bt authentication token'
-    required: true
+    required: false
     default: 'null'
   timeout:
     description: 'http request timeout'
