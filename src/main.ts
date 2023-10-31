@@ -16,7 +16,7 @@ const run = async (): Promise<void> => {
       method: 'post',
       baseURL: core.getInput('base-url', { required: true }),
       url: core.getInput('url', { required: true }),
-      timeout: parseInt(core.getInput('', { required: false })),
+      timeout: parseInt(core.getInput('timeout', { required: false })),
       headers: {
         'Content-Type': 'application/json',
         Authorization: core.getInput('token', { required: true })
