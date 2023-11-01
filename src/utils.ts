@@ -14,7 +14,6 @@ export const REQUIRED_FIELDS = [
 ]
 
 export const DEFAULT_VALUES = {
-  TOKEN: 'no-token',
   BASE_URL: 'localhost',
   SUMMARY: 'no-summary',
   DESCRIPTION: 'no-description',

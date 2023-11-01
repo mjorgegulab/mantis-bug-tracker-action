@@ -26,10 +26,9 @@ const run = async (): Promise<void> => {
       timeout: parseInt(core.getInput('timeout', { required: false })),
       headers: {
         'Content-Type': 'application/json',
-        Authorization:
-          core.getInput('token', { required: false }) !== 'null'
-            ? core.getInput('token', { required: false })
-            : DEFAULT_VALUES.TOKEN
+        ...(core.getInput('token', { required: false }) !== 'null' && {
+          Authorization: core.getInput('token', { required: false })
+        })
       },
       validateStatus: () => true,
       ..._getAxiosProxySettings(),
