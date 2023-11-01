@@ -13,6 +13,14 @@ export const REQUIRED_FIELDS = [
   'category-id'
 ]
 
+export const DEFAULT_VALUES = {
+  BASE_URL: 'localhost',
+  SUMMARY: 'no-summary',
+  DESCRIPTION: 'no-description',
+  PROJECT_ID: 1,
+  CATEGORY_ID: 1
+}
+
 export const _checkRequiredFields = (REQUIRED_FIELDS: string[]): void => {
   for (const requiredField of REQUIRED_FIELDS) {
     if (['', 'null'].includes(core.getInput(requiredField))) {
@@ -44,17 +52,33 @@ export const _getAxiosProxySettings = (): { proxy: AxiosProxyConfig } | {} => {
 export const _sanitizeInput = (input: string): string =>
   sanitizeHtml(markdownToTxt(input))
 
-export const _getMantisIssueObject = (): {} => {
+export const _getMantisIssueObject = (_skipRequired: boolean): {} => {
   const mantisObject: any = {
-    summary: _sanitizeInput(core.getInput('summary', { required: true })),
-    description: _sanitizeInput(
-      core.getInput('description', { required: true })
-    ),
+    summary:
+      core.getInput('summary', { required: !_skipRequired }) !== 'null'
+        ? _sanitizeInput(core.getInput('summary', { required: !_skipRequired }))
+        : DEFAULT_VALUES.SUMMARY,
+    description:
+      core.getInput('description', { required: !_skipRequired }) !== 'null'
+        ? _sanitizeInput(
+            core.getInput('description', { required: !_skipRequired })
+          )
+        : DEFAULT_VALUES.DESCRIPTION,
     project: {
-      id: _sanitizeInput(core.getInput('project-id', { required: true }))
+      id:
+        core.getInput('project-id', { required: !_skipRequired }) !== 'null'
+          ? _sanitizeInput(
+              core.getInput('project-id', { required: !_skipRequired })
+            )
+          : DEFAULT_VALUES.PROJECT_ID
     },
     category: {
-      id: _sanitizeInput(core.getInput('category-id', { required: true }))
+      id:
+        core.getInput('category-id', { required: !_skipRequired }) !== 'null'
+          ? _sanitizeInput(
+              core.getInput('category-id', { required: !_skipRequired })
+            )
+          : DEFAULT_VALUES.CATEGORY_ID
     }
   }
 

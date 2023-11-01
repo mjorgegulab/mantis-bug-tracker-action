@@ -12,7 +12,7 @@ inputs:
     default: '/'
   token:
     description: 'mantis-bt authentication token'
-    required: true
+    required: false
     default: 'null'
   timeout:
     description: 'http request timeout'
@@ -38,6 +38,10 @@ inputs:
     description: 'http request proxy password'
     required: false
     default: 'null'
+  skip-required:
+    description: 'allow to skip the required options'
+    required: false
+    default: 'false'
   summary:
     description: 'mantis-bt issue summary'
     required: true
