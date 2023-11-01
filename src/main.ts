@@ -5,25 +5,35 @@ import {
   _checkRequiredFields,
   _getAxiosProxySettings,
   _getMantisIssueObject,
+  DEFAULT_VALUES,
   REQUIRED_FIELDS
 } from './utils'
 
 const run = async (): Promise<void> => {
+  const _skipRequired = Boolean(
+    core.getInput('skip-required', {
+      required: false
+    })
+  )
+
   try {
-    _checkRequiredFields(REQUIRED_FIELDS)
+    if (_skipRequired) _checkRequiredFields(REQUIRED_FIELDS)
 
     const axiosConfigObject: AxiosRequestConfig = {
       method: 'post',
-      baseURL: core.getInput('base-url', { required: true }),
-      url: core.getInput('url', { required: true }),
+      baseURL: core.getInput('base-url', { required: !_skipRequired }),
+      url: core.getInput('url', { required: !_skipRequired }),
       timeout: parseInt(core.getInput('timeout', { required: false })),
       headers: {
         'Content-Type': 'application/json',
-        Authorization: core.getInput('token', { required: true })
+        Authorization:
+          core.getInput('token', { required: false }) !== 'null'
+            ? core.getInput('token', { required: false })
+            : DEFAULT_VALUES.TOKEN
       },
       validateStatus: () => true,
       ..._getAxiosProxySettings(),
-      data: _getMantisIssueObject()
+      data: _getMantisIssueObject(_skipRequired)
     }
 
     const _response = await axios.request(axiosConfigObject)

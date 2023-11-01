@@ -51,6 +51,12 @@ Keys can be added directly to your .yml config file or referenced from your proj
 To add a `secret` go to the `Settings` tab in your project then select `Secrets`.
 I strongly recommend you store your `token` as a secret.
 
+#### _Action options_
+
+| Key Name         | Required | Example | Default Value | Description                               |
+| ---------------- |----------|---------|---------------|-------------------------------------------|
+| `skip-required`  | No       | `true`  | `false`       | Allow to skip the action required options |
+
 #### _HTTP client options_
 
 | Key Name         | Required | Example                   | Default Value | Description                                  |
