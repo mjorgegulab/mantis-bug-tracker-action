@@ -5,7 +5,7 @@
     "url": "git+https://github.com/mjorgegulab/mantis-bug-tracker-action.git"
   },
   "homepage": "https://github.com/mjorgegulab/mantis-bug-tracker-action/#readme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Mantis Bug Tracker Action",
   "main": "lib/main.js",
   "license": "MIT",
