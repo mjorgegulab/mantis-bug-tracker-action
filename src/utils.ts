@@ -82,6 +82,10 @@ export const _getMantisIssueObject = (_skipRequired: boolean): {} => {
     }
   }
 
+  if (core.getInput('pre-summary') !== 'null') {
+    mantisObject.summary = `${_sanitizeInput(core.getInput('pre-summary'))} ${mantisObject.summary}`
+  }
+
   if (core.getInput('additional-information') !== 'null')
     mantisObject.additional_information = _sanitizeInput(
       core.getInput('additional-information')

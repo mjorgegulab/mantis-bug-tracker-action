@@ -46,6 +46,10 @@ inputs:
     description: 'mantis-bt issue summary'
     required: true
     default: 'null'
+  pre-summary:
+    description: 'mantis-bt issue pre summary'
+    required: false
+    default: 'null'
   description:
     description: 'mantis-bt issue description'
     required: true
