@@ -73,9 +73,10 @@ I strongly recommend you store your `token` as a secret.
 #### _MantisBT issue information_
 
 | Key Name                 | Required | Example                            | Default Value | Description                                     |
-| ------------------------ | -------- | ---------------------------------- | ------------- | ----------------------------------------------- |
+|--------------------------|----------|------------------------------------| ------------- |-------------------------------------------------|
 | `token`                  | Yes      | `s7dgs8s6a8fa8d68sdgdgi`           | `null`        | The MantisBT API token                          |
 | `summary`                | Yes      | `Super Issue Title ✨`             | `null`        | The MantisBT issue summary field                |
+| `pre-summary`            | No       | `SuperProject [FRONT] >`           | `null`        | Prepend a text before the summary               |
 | `description`            | Yes      | `Super Issue Description 📝`       | `null`        | The MantisBT issue description field            |
 | `additional-information` | No       | `Some Tiny Additional Information` | `null`        | The MantisBT issue additional information field |
 | `project-id`             | Yes      | `11`                               | `null`        | The MantisBT issue project id field             |
@@ -214,6 +215,7 @@ jobs:
           proxy-port: '8080'
           proxy-username: 'root'
           proxy-password: 'toor'
+          pre-summary: 'SuperProject-01 [FRONT] >'
           summary: ${{ github.event.issue.title }}
           description: ${{ github.event.issue.body }}
           additional-information: 'Super additional info 🌟🌟🌟'
