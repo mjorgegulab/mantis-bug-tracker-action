@@ -97,5 +97,8 @@ describe('_sanitizeInput', () => {
     expect(_sanitizeInput(`### TITLE 01 <script>alert('test')</script>`)).toBe(
       "TITLE 01 alert('test')"
     )
+    expect(_sanitizeInput(`SUPER PROJECT [AAA] \>`)).toBe(
+      'SUPER PROJECT [AAA] &gt;'
+    )
   })
 })
