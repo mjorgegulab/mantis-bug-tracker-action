@@ -38,7 +38,7 @@
     "axios": "^1.8.4",
     "lodash": "^4.17.21",
     "markdown-to-txt": "^2.0.1",
-    "sanitize-html": "^2.15.0"
+    "sanitize-html": "^2.16.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
